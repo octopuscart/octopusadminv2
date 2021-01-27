@@ -188,6 +188,10 @@ $this->load->view('layout/topmenu');
                             </div>
                         </div>
                     </div>
+                    <div class="form-group">
+                            <label >External Link</label>
+                            <input type="text" class="form-control" name="video_link"  aria-describedby="emailHelp" placeholder="" required="" value="<?php echo $product_obj->video_link; ?>">
+                        </div>
 
 
 
@@ -279,7 +283,7 @@ $this->load->view('layout/footer');
 
 <script>
     Admin.controller('productController', function ($scope, $http, $filter, $timeout) {
-        $scope.selectedCategory = {'category_string': '<?php echo $category_string; ?>', 'category_id': ""};
+        $scope.selectedCategory = {'category_string': "<?php echo $category_string; ?>", 'category_id': ""};
 
         var url = "<?php echo base_url(); ?>index.php/ProductManager/category_api";
         $http.get(url).then(function (rdata) {

@@ -319,11 +319,12 @@ class ProductManager extends CI_Controller {
                 'sale_price' => $this->input->post('sale_price'),
                 'price' => $this->input->post('price'),
                 'file_name' => $file_newname,
-                'offer'=> $this->input->post('offer'),
+                'offer' => $this->input->post('offer'),
+                'video_link' => $this->input->post('video_link'),
                 'file_name1' => "",
                 'file_name2' => "",
                 'status' => 1,
-                'stock_status'=>'In Stock',
+                'stock_status' => 'In Stock',
                 'op_date_time' => $datetime,
                 'user_id' => $user_id);
 
@@ -352,11 +353,11 @@ class ProductManager extends CI_Controller {
     function edit_product($product_id) {
         $product_model = $this->Product_model;
         $data['product_model'] = $product_model;
-        $data['product_attributes'] = $product_model->product_attribute_list($product_id);
+        $data['product_attributes'] = array();
 
         $data['attributefunction'] = $product_model;
 
-        $data['product_detail_attrs'] = $product_model->productAttributes($product_id);
+        $data['product_detail_attrs'] = array();
 
 
 
@@ -387,14 +388,14 @@ class ProductManager extends CI_Controller {
             $this->db->update('products'); //
             redirect("ProductManager/productReport");
         }
-        
+
         if (isset($_POST['recoverdata'])) {
             $this->db->set('status', 1);
             $this->db->where('id', $product_id); //set column_name and value in which row need to update
             $this->db->update('products'); //
             redirect("ProductManager/productReport");
         }
-        
+
         if (isset($_POST['deletedata'])) {
             $this->db->where('id', $product_id); //set column_name and value in which row need to update
             $this->db->delete('products'); //
@@ -489,7 +490,8 @@ class ProductManager extends CI_Controller {
                 'regular_price' => $this->input->post('regular_price'),
                 'sale_price' => $this->input->post('sale_price'),
                 'price' => $this->input->post('price'),
-                'offer'=>$this->input->post('offer'),
+                'offer' => $this->input->post('offer'),
+                'video_link' => $this->input->post('video_link'),
                 'status' => 1,
                 'stock_status' => $this->input->post('stock_status')
             );

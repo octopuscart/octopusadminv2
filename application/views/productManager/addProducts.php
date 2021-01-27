@@ -87,8 +87,8 @@ $this->load->view('layout/topmenu');
                     <div class="row">
                         <div class="col-md-3">
                             <div class="thumbnail">
-                              
-                                <img src="<?php echo (base_url() . "assets/default/default.png");?>" style="    width: 100%;">
+
+                                <img src="<?php echo (base_url() . "assets/default/default.png"); ?>" style="    width: 100%;">
                                 <div class="caption">
                                     <div class="form-group">
                                         <label for="image1">Upload Primary Image</label>
@@ -126,6 +126,12 @@ $this->load->view('layout/topmenu');
                             </div>
                         </div>
 
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label >External Link</label>
+                            <input type="text" class="form-control" name="video_link"  aria-describedby="emailHelp" placeholder="" required="">
+                        </div>
                     </div>
 
 
