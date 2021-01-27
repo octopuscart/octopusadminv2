@@ -2,6 +2,7 @@
 
 date_default_timezone_set('Asia/Hong_Kong');
 require("configdbconnect.php");
+
 $configuration = $globleConnectDB;
 defined('BASEPATH') OR exit('No direct script access allowed');
 define('PANELVERSION', "V0.9.5.18");

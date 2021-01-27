@@ -2,9 +2,9 @@
 require('configuration_db.php');
 $globleConnectDB = array();
 try {
-    $username = $activedbusername;
-    $password = $activedbpassword;
-    $dbname = $activedb;
+   echo  $username = $activedbusername;
+   echo  $password = $activedbpassword;
+   echo  $dbname = $activedb;
 
     $conn = new PDO("mysql:host=localhost;dbname=$activedb", $username, $password);
 
