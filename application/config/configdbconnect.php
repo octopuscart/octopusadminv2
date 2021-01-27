@@ -34,6 +34,7 @@ try {
     while ($row = $stmt->fetch()) {
         $globleConnectTheme = $row;
     }
+    print_r($globleConnectCheckout);
     
 } catch (PDOException $e) {
     
