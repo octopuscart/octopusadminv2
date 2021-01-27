@@ -2,9 +2,9 @@
 require('configuration_db.php');
 $globleConnectDB = array();
 try {
-   echo  $username = $activedbusername;
-   echo  $password = $activedbpassword;
-   echo  $dbname = $activedb;
+    $username = $activedbusername;
+    $password = $activedbpassword;
+    $dbname = $activedb;
 
     $conn = new PDO("mysql:host=localhost;dbname=$activedb", $username, $password);
 
@@ -34,7 +34,6 @@ try {
     while ($row = $stmt->fetch()) {
         $globleConnectTheme = $row;
     }
-    print_r($globleConnectCheckout);
     
 } catch (PDOException $e) {
     
