@@ -5,6 +5,7 @@ require("configdbconnect.php");
 $configuration = $globleConnectDB;
 defined('BASEPATH') OR exit('No direct script access allowed');
 define('PANELVERSION', "V0.9.5.18");
+print_r($configuration);
 
 //Project inforamtion
 define('AUTOSKU', True);
