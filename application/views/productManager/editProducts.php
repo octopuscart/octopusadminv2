@@ -295,7 +295,7 @@ $this->load->view('layout/footer');
 
             $('#using_json_2').bind('ready.jstree', function (e, data) {
                 $timeout(function () {
-                    $scope.getCategoryString(4);
+                    $scope.getCategoryString(<?php echo $product_obj->category_id; ?>);
                 }, 100);
             })
         });
